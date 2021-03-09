@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AB000000"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="392dp"
+        android:layout_height="34dp"
+        android:background="@android:drawable/divider_horizontal_textfield"
+        android:gravity="center"
+        android:text="        首次启动          最后启动            使用时间"
+        android:textColor="#06FA06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /><![CDATA[
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.072" />
+
+
+
+    ]]>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="524dp"
+        android:background="#AB000000"
+        android:backgroundTint="#F5F5F5"
+        android:divider="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="380dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="#979494"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/choiceTime"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="188dp"
+        android:background="@drawable/time"
+        android:onClick="bt_choice_click"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/button_startservice"
+        app:layout_constraintEnd_toEndOf="@id/button_startservice" />
+
+    <Button
+        android:id="@+id/bt_showdata"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="308dp"
+        android:background="@drawable/btn_show"
+        android:onClick="bt_showdata_click"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/button_startservice"
+        app:layout_constraintEnd_toEndOf="@id/button_startservice" />
+
+    <Button
+        android:id="@+id/bt_fliter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="250dp"
+        android:background="@drawable/download"
+        android:onClick="bt_fresh_onclick"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/button_startservice"
+        app:layout_constraintEnd_toEndOf="@id/button_startservice" />
+
+    <EditText
+        android:id="@+id/EditText_appname"
+        android:layout_width="358dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="100dp"
+        android:ems="10"
+        android:hint="搜索"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/textView11"
+        app:layout_constraintEnd_toEndOf="@id/textView11" />
+
+    <Button
+        android:id="@+id/button_startservice"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/allowsave"
+        android:onClick="btn_startservice"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_stopservice"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/stopsave"
+        android:onClick="bt_stopservice"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/button_startservice"
+        app:layout_constraintEnd_toStartOf="@id/button_startservice" />
+
+    <Button
+        android:id="@+id/button_toDataGraph"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="124dp"
+        android:background="@drawable/graph"
+        android:onClick="bt_toDataGraph"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/button_startservice"
+        app:layout_constraintEnd_toEndOf="@id/button_startservice" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/EditText_appname"
+        app:layout_constraintEnd_toEndOf="@+id/EditText_appname"
+        app:layout_constraintTop_toTopOf="@+id/EditText_appname"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/apps" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="12dp"
+        android:text="开启自动更新"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_startservice" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="取消自动更新"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="83dp"
+        android:text="图表"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:text="时间范围"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="210dp"
+        android:text="更新"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="268dp"
+        android:text="展示"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView12" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
